@@ -1,6 +1,46 @@
 <?php 
-$pageTitle = "Main";
+ $pageTitle="";
 include "includes/header.php"; ?>
+
+<!--
+
+$pageTitle ....
+
+***HEADER.PHP HAS IN THE TOP INCLUDE_ONCE "UTILITIES.PHP"***
+UTILITIES.PHP
+function isProduction(){
+// Provide way of knowing if the code is on production server
+
+
+return false;
+
+}
+
+
+function isDebugMode(){
+// Set to true if not on production
+// You may want to provide other ways for setting debug mode
+
+
+  return !isProduction();
+  
+}
+
+if(isDebugMode()){
+
+  error_reporting(E_ALL);
+  ini_set('display_errors', '1');
+
+
+}
+
+
+
+
+
+
+
+-->
 <main>
   <h1>Latest Poems</h1>
   <table>
@@ -39,6 +79,6 @@ include "includes/header.php"; ?>
     </tfoot>
   </table>
 </main>
-<?php include "includes/footer.php"; ?>
+<?php include "includes/footer.php"; ?><!-- i am using include because this is only html  -->
 </body>
 </html>

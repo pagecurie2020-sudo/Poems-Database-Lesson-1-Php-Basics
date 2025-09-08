@@ -1,3 +1,45 @@
+<?php
+
+/*include_once "utilities.php";//every configuration file should only
+//be included once, so that is why we used include_once (it prevents duplicate outputs and errors 
+//if you call a session multitple times, it will 
+//return a warning, so to prevent this warning, include_once
+//)
+
+if(isDebugMode()){
+
+  error_reporting(E_ALL);
+//ini_set('display_errors', 0);
+
+
+}*/
+
+
+  require_once 'utilities.php';
+  if (isDebugMode()) {
+    ini_set('display_errors', '1');
+  }
+
+
+  $pageTitleTag="";
+
+
+  if($pageTitle){
+
+    $pageTitleTag= "$pageTitle" . " | *** The Poet Tree Club";
+  }else{
+
+    $pageTitleTag = " The Poet Tree Club";
+
+  }
+
+  
+
+
+
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -12,7 +54,7 @@
 <link rel="stylesheet" href="includes/normalize.css">
 <link rel="stylesheet" href="includes/styles.css">
 <script src="../../../static/scripts/scripts.js"></script>
-<title><?php echo "$pageTitle | The Poet Tree Club"; ?> </title>
+<title><?php echo $pageTitleTag  ?> </title>
 </head>
 <body>
 <header>
@@ -30,5 +72,5 @@
     </ul>
   </nav>
   <h1><a href="index.php">The Poet Tree Club</a></h1>
-  <h2>Set your poems free...</h2>
+  <h2>Set your poems free </h2>
 </header>

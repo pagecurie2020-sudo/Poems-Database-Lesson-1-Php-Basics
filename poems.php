@@ -1,7 +1,7 @@
 
 <?php 
 
-$pageTitle = "Poems";
+$pageTitle = "Poems";//best to put variables at the very top
 include "includes/header.php"; 
 
 
