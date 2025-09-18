@@ -17,21 +17,22 @@ if(isDebugMode()){
 
   require_once 'utilities.php';
   if (isDebugMode()) {
-    ini_set('display_errors', '1');
+   
+    ini_set('display_errors', 1);
   }
 
+$pageTitleTag = isset($pageTitle) 
+? $pageTitle . " | The Poest Tree Club" 
+: "The Poet Tree Club ";
 
-  $pageTitleTag="";
+  /*if(isset($pageTitle)){
 
-
-  if($pageTitle){
-
-    $pageTitleTag= "$pageTitle" . " | *** The Poet Tree Club";
+    $pageTitleTag= "$pageTitle" . " | The Poet Tree Club";
   }else{
 
-    $pageTitleTag = " The Poet Tree Club";
+    $pageTitleTag = "**** The Poet Tree Club";
 
-  }
+  }*/
 
   
 
