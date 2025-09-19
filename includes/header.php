@@ -14,6 +14,15 @@ if(isDebugMode()){
 
 }*/
 
+/*
+09/19/2025
+This is my first time using the pull command by editing my code in Github and pulling 
+the revised code into my local repository so that both versions (github and local repo) 
+are identical
+
+
+
+*/
 
   require_once 'utilities.php';
   if (isDebugMode()) {
